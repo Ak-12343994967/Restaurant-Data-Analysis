@@ -19,8 +19,9 @@ print("Merging data...")
 merged_df = orders_df.merge(users_df, on='user_id', how='left')
 final_df = merged_df.merge(restaurants_df, on='restaurant_id', how='left')
 
-output_filename = 'final_output.csv'
+output_filename = 'final_food_delivery_dataset.csv'
 final_df.to_csv(output_filename, index=False)
 
 print(f"SUCCESS! Created: {output_filename}")
+
 print(f"Total rows: {len(final_df)}")
